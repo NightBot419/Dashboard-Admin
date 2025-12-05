@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Nguyen Van A",
+    "totalPurchases": 30000000
+  },
+  {
+    "id": 2,
+    "name": "Tran Thi B",
+    "totalPurchases": 23750000
+  },
+  {
+    "id": 3,
+    "name": "Le Van C",
+    "totalPurchases": 37500000
+  },
+  {
+    "id": 4,
+    "name": "Pham Thi D",
+    "totalPurchases": 20000000
+  },
+  {
+    "id": 5,
+    "name": "Hoang Van E",
+    "totalPurchases": 27500000
+  },
+  {
+    "id": 6,
+    "name": "Dang Thi F",
+    "totalPurchases": 17500000
+  },
+  {
+    "id": 7,
+    "name": "Bui Van G",
+    "totalPurchases": 32500000
+  },
+  {
+    "id": 8,
+    "name": "Do Thi H",
+    "totalPurchases": 22500000
+  },
+  {
+    "id": 9,
+    "name": "Vo Van I",
+    "totalPurchases": 26250000
+  },
+  {
+    "id": 10,
+    "name": "Truong Thi K",
+    "totalPurchases": 16250000
+  },
+  {
+    "id": 11,
+    "name": "Ngo Van L",
+    "totalPurchases": 35000000
+  },
+  {
+    "id": 12,
+    "name": "Duong Thi M",
+    "totalPurchases": 18750000
+  }
+]

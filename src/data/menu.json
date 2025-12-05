@@ -1,0 +1,100 @@
+[
+    {
+        "category": "Coffee",
+        "items": [
+            {
+                "id": "coffee-001",
+                "name": "Espresso",
+                "price": 62500,
+                "sold": 120
+            },
+            {
+                "id": "coffee-002",
+                "name": "Latte",
+                "price": 100000,
+                "sold": 250
+            },
+            {
+                "id": "coffee-003",
+                "name": "Cappuccino",
+                "price": 93750,
+                "sold": 180
+            },
+            {
+                "id": "coffee-004",
+                "name": "Americano",
+                "price": 75000,
+                "sold": 90
+            }
+        ]
+    },
+    {
+        "category": "Tea",
+        "items": [
+            {
+                "id": "tea-001",
+                "name": "Green Tea",
+                "price": 50000,
+                "sold": 80
+            },
+            {
+                "id": "tea-002",
+                "name": "Black Tea",
+                "price": 50000,
+                "sold": 60
+            },
+            {
+                "id": "tea-003",
+                "name": "Chai Latte",
+                "price": 106250,
+                "sold": 150
+            }
+        ]
+    },
+    {
+        "category": "Juice",
+        "items": [
+            {
+                "id": "juice-001",
+                "name": "Orange Juice",
+                "price": 87500,
+                "sold": 110
+            },
+            {
+                "id": "juice-002",
+                "name": "Apple Juice",
+                "price": 81250,
+                "sold": 70
+            },
+            {
+                "id": "juice-003",
+                "name": "Mango Smoothie",
+                "price": 125000,
+                "sold": 200
+            }
+        ]
+    },
+    {
+        "category": "Soda",
+        "items": [
+            {
+                "id": "soda-001",
+                "name": "Coca-Cola",
+                "price": 50000,
+                "sold": 300
+            },
+            {
+                "id": "soda-002",
+                "name": "Pepsi",
+                "price": 50000,
+                "sold": 280
+            },
+            {
+                "id": "soda-003",
+                "name": "Sprite",
+                "price": 50000,
+                "sold": 190
+            }
+        ]
+    }
+]

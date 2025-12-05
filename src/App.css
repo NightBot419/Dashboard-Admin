@@ -1,0 +1,517 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+
+@import "tailwindcss";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
+
+/* @theme {
+  --color-primary: #56ccf2;
+  --color-secondary: #87f5f5;
+  --color-tertiary: #2e7eff;
+
+  --shadow-card: 0px 35px 120px -15px #211e35;
+  --breakpoint-xs: 450px;
+} */
+
+
+@theme {
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-card: hsl(var(--card));
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.7s ease-out forwards;
+  --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
+  --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
+  --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
+  --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
+
+  --animate-meteor: meteor 5s linear infinite;
+  --breakpoint-xs: 450px;
+}
+
+@layer utilities {
+
+  .paddingX {
+    @apply sm:px-16 px-6;
+  }
+
+  .paddingY {
+    @apply sm:py-16 py-6;
+  }
+
+  .padding {
+    @apply sm:px-16 px-6 sm:py-24 py-16;
+  }
+
+  .heroHeadText {
+    @apply font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[36px];
+  }
+
+  .heroSubText {
+    @apply font-black lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px];
+  }
+
+  .sectionHeadText {
+    @apply font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px];
+  }
+
+  .sectionSubText {
+    @apply sm:text-[18px] text-[14px] uppercase tracking-wider;
+  }
+}
+
+
+
+
+.hash-span {
+  margin-top: -100px;
+  padding-bottom: 100px;
+  display: block;
+}
+
+.show-link::after {
+  /* Thuộc tính quan trọng nhất: Lấy giá trị của thuộc tính 'href' */
+  content: " " attr(href) ". ";
+
+  /* Các thiết lập CSS tùy chọn */
+  font-size: 0.9em;
+  /* Làm cho URL nhỏ hơn một chút */
+  color: #555;
+  /* Đổi màu để dễ đọc hơn */
+  margin-left: 5px;
+  /* Thêm một chút khoảng cách */
+  text-decoration: none;
+  /* Loại bỏ gạch chân cho URL */
+}
+
+.black-gradient {
+  background: #000000;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,
+      #434343,
+      #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,
+      #434343,
+      #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bg-gradient-1 {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+.violet-gradient {
+  background: #804dee;
+  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(-90deg,
+      #804dee 0%,
+      rgba(60, 51, 80, 0) 100%);
+}
+
+.blue-gradient {
+  background: #5692f2;
+  background: linear-gradient(-90deg, #56ccf2 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(-90deg,
+      #56ccf2 0%,
+      rgba(60, 51, 80, 0) 100%);
+}
+
+.green-pink-gradient {
+  background: "#00cea8";
+  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
+
+.orange-text-gradient {
+  background: #f12711;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top,
+      #f12711,
+      #f5af19);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top,
+      #f12711,
+      #f5af19);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.green-text-gradient {
+  background: #11998e;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top,
+      #11998e,
+      #38ef7d);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top,
+      #11998e,
+      #38ef7d);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-text-gradient {
+  /* background: -webkit-linear-gradient(#eee, #333); */
+  background: #56ccf2;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top,
+      #2f80ed,
+      #56ccf2);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top,
+      #2f80ed,
+      #56ccf2);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pink-text-gradient {
+  background: #ec008c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top,
+      #ec008c,
+      #fc6767);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top,
+      #ec008c,
+      #fc6767);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-text-gradient {
+  /* background: -webkit-linear-gradient(#eee, #333); */
+  background: #56ccf2;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top,
+      #2f80ed,
+      #56ccf2);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top,
+      #2f80ed,
+      #56ccf2);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+@keyframes mulShdSpin {
+
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em #ffffff,
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.5),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
+  }
+
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7),
+      1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
+  }
+
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7), 2.5em 0em 0 0em #ffffff,
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.7), 1.75em 1.75em 0 0em #ffffff,
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.5),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7), 0em 2.5em 0 0em #ffffff,
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0em #ffffff,
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.5),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7), -2.6em 0em 0 0em #ffffff,
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
+  }
+}
+
+.glowing {
+  position: fixed;
+  min-width: 700px;
+  height: 550px;
+  margin: 150px;
+  transform-origin: right;
+  animation: colorChange 5s linear infinite;
+}
+
+.glowing:nth-child(even) {
+  transform-origin: left;
+}
+
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.glowing span {
+  position: absolute;
+  top: calc(80px * var(--i));
+  left: calc(10px * var(--i));
+  bottom: calc(120px * var(--i));
+  right: calc(180px * var(--i));
+}
+
+.glowing span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  background: #f00;
+  border-radius: 50%;
+}
+
+.glowing span:nth-child(3n + 1)::before {
+  background: rgba(134, 255, 0, 1);
+  box-shadow: 0 0 20px rgba(134, 255, 0, 1),
+    0 0 40px rgba(134, 255, 0, 1),
+    0 0 60px rgba(134, 255, 0, 1),
+    0 0 80px rgba(134, 255, 0, 1),
+    0 0 0 8px rgba(134, 255, 0, .1);
+}
+
+.glowing span:nth-child(3n + 2)::before {
+  background: rgba(255, 214, 0, 1);
+  box-shadow: 0 0 20px rgba(255, 214, 0, 1),
+    0 0 40px rgba(255, 214, 0, 1),
+    0 0 60px rgba(255, 214, 0, 1),
+    0 0 80px rgba(255, 214, 0, 1),
+    0 0 0 8px rgba(255, 214, 0, .1);
+}
+
+.glowing span:nth-child(3n + 3)::before {
+  background: rgba(0, 226, 255, 1);
+  box-shadow: 0 0 20px rgba(0, 226, 255, 1),
+    0 0 40px rgba(0, 226, 255, 1),
+    0 0 60px rgba(0, 226, 255, 1),
+    0 0 80px rgba(0, 226, 255, 1),
+    0 0 0 8px rgba(0, 226, 255, .1);
+}
+
+.glowing span:nth-child(3n + 1) {
+  animation: animate 10s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 2) {
+  animation: animate-reverse 3s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 3) {
+  animation: animate 8s alternate infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ToggleButton.css */
+.toggle-btn {
+  --height: 52px;
+  --padding: 12px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  height: var(--height);
+  padding: 0 var(--padding);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 300ms ease, box-shadow 200ms ease;
+  box-shadow: 0 6px 18px rgba(2, 10, 23, 0.35);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* trạng thái off (ban đầu) */
+.toggle-btn.off {
+  background: linear-gradient(180deg, #ff4d4f 0%, #e33b3b 100%);
+}
+
+/* trạng thái on (sau khi click) */
+.toggle-btn.on {
+  background: linear-gradient(180deg, #24c17f 0%, #1aa969 100%);
+}
+
+/* label text */
+.toggle-btn .label {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 12px;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+/* icon wrapper: vị trí tương đối trong button */
+.toggle-btn .icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  transition: transform 350ms cubic-bezier(.2, .8, .2, 1), background 250ms ease;
+  /* chúng ta sẽ dịch chuyển icon-wrap bằng transform để nó "nhảy" trái/phải */
+}
+
+/* icon */
+.toggle-btn .icon {
+  display: block;
+  stroke: white;
+}
+
+/* vị trí icon khi off: nằm bên phải của button */
+.toggle-btn.off .icon-wrap {
+  transform: translateX(0);
+  /* mặc định nằm ở cuối hàng (do margin-left auto) */
+  margin-left: auto;
+  margin-right: 2px;
+}
+
+/* vị trí icon khi on: di chuyển sang trái */
+.toggle-btn.on .icon-wrap {
+  transform: translateX(-8px);
+  margin-left: 2px;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* hiệu ứng nhỏ khi hover/focus */
+.toggle-btn:focus {
+  outline: none;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45), 0 0 0 4px rgba(63, 132, 210, 0.12);
+}
+
+/* thay đổi label vị trí để cân bằng khi icon dịch chuyển */
+.toggle-btn.on .label {
+  transform: translateX(6px);
+}
+
+.toggle-btn.off .label {
+  transform: translateX(0);
+}
+
+/* responsive: thu nhỏ trên màn hình quá nhỏ */
+@media (max-width: 420px) {
+  .toggle-btn {
+    --height: 44px;
+    --padding: 10px;
+  }
+
+  .toggle-btn .label {
+    font-size: 13px;
+  }
+}

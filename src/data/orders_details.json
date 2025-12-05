@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ORD001",
+    "items": [
+      {"name": "Latte", "quantity": 2, "price": 100000},
+      {"name": "Croissant", "quantity": 1, "price": 75000}
+    ],
+    "total": 275000
+  },
+  {
+    "id": "ORD002",
+    "items": [
+      {"name": "Espresso", "quantity": 1, "price": 62500},
+      {"name": "Green Tea", "quantity": 1, "price": 50000},
+      {"name": "Blueberry Muffin", "quantity": 1, "price": 87500}
+    ],
+    "total": 200000
+  },
+  {
+    "id": "ORD003",
+    "items": [
+      {"name": "Cappuccino", "quantity": 3, "price": 93750}
+    ],
+    "total": 281250
+  },
+  {
+    "id": "ORD004",
+    "items": [
+      {"name": "Mango Smoothie", "quantity": 1, "price": 125000},
+      {"name": "Apple Juice", "quantity": 2, "price": 81250}
+    ],
+    "total": 287500
+  },
+  {
+    "id": "ORD005",
+    "items": [
+      {"name": "Coca-Cola", "quantity": 4, "price": 50000},
+      {"name": "Fries", "quantity": 1, "price": 100000}
+    ],
+    "total": 300000
+  }
+]
