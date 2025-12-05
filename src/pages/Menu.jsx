@@ -54,8 +54,8 @@ function Menu({ onSaveMenuData }) { // Accept onSaveMenuData as a prop
             <nav style={styles.navbar}>
                 <h1 style={styles.logo}>Drink Store Admin</h1>
                 <div style={styles.navLinks}>
-                    <Link to="/Dashboard-Admin/dash" style={styles.navLink}>Dashboard</Link>
-                    <Link to="/Dashboard-Admin/menu" style={styles.navLink}>Menu</Link>
+                    <Link to="/Dashboard-Admin/dash" style={styles.navLink}>Tổng quan</Link>
+                    <Link to="/Dashboard-Admin/menu" style={styles.navLink}>Thực đơn</Link>
                 </div>
             </nav>
 

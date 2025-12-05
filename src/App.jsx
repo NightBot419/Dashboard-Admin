@@ -23,10 +23,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/Dashboard-Admin/login" element={!isAuthenticated ? <Login onLogin={handleLogin} /> : <Navigate to="/dash" />} />
-        <Route path="/Dashboard-Admin/dash" element={isAuthenticated ? <Dash /> : <Navigate to="/login" />} />
-        <Route path="/Dashboard-Admin/menu" element={isAuthenticated ? <Menu onSaveMenuData={saveMenuDataToFile} /> : <Navigate to="/login" />} />
-        <Route path="/Dashboard-Admin/" element={<Navigate to="/login" />} />
+        <Route path="/Dashboard-Admin/login" element={!isAuthenticated ? <Login onLogin={handleLogin} /> : <Navigate to="/Dashboard-Admin/dash" />} />
+        <Route path="/Dashboard-Admin/dash" element={isAuthenticated ? <Dash /> : <Navigate to="/Dashboard-Admin/login" />} />
+        <Route path="/Dashboard-Admin/menu" element={isAuthenticated ? <Menu onSaveMenuData={saveMenuDataToFile} /> : <Navigate to="/Dashboard-Admin/login" />} />
+        <Route path="/Dashboard-Admin/" element={<Navigate to="/Dashboard-Admin/login" />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
